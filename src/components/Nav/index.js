@@ -22,7 +22,7 @@ export default function Nav() {
   return (
     <header data-testid='header' className='flex-row px-1'>
       <h2>
-        <a href='/'>
+        <a data-testid='link' href='/'>
           <span role='img' aria-label='camera'>
             {' '}
             📸
@@ -33,7 +33,11 @@ export default function Nav() {
       <nav>
         <ul className='flex-row'>
           <li className='mx-2'>
-            <a href='#about' onClick={() => categorySelected('about me')}>
+            <a
+              data-testid='about'
+              href='#about'
+              onClick={() => categorySelected('about me')}
+            >
               About me
             </a>
           </li>
